@@ -1,0 +1,63 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+
+    {% block content %}
+<div class="container">
+    <h1 class="text-warning mb-5 mt-3 border-bottom">Contact Us</h1>
+<div class="row text-white mb-5">
+    <p class="mx-auto mb-5">
+        Do you have any question ? please do not hesitate to contact i will come back to you within a matter of hours to help you
+    </p>
+    <div class="col-sm-9 mb-5">
+        <form action="/contact/" method="post"> {% csrf_token %}
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Your name</label>
+                    <input name="Name" type="text" class="form-control" id="inputName" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Your Email</label>
+                    <input name="email" type="text" class="form-control" id="inputEmail" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputSubject">Your Subject</label>
+                    <input type="text" class="form-control" id="inputSubject"  name="subject" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputTextarea">Your message</label>
+<textarea class="form-control" id="inputTextarea" required name="message"></textarea>
+                </div>
+            </div>
+            <button class="btn btn-primary mt-3" type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="col-sm-3 text-center">
+        <ul class="list-unstyled">
+            <li>
+            <i class="fas fa-map-marker-alt fa-2x i-color"></i>
+                <p>Alwar Rajasthan</p>
+            </li>
+            <li>
+            <i class="fas fa-phone mt-4 fa-2x i-color"></i>
+                <p>9413944510</p>
+            </li>
+            <li>
+            <i class="fas fa-enveloper mt-4 fa-2x i-color"></i>
+                <p>pawan941394@gmail.com
+                 {{contactinfo.Name}}</p>
+            </li>
+            <li>
+
+        </ul>
+    </div>
+</div>
+</div>
+<div class="text-center">
+    <a href="" target="_blank"><i class="fab fa-twitter i-color mr-3"></i></a>
+    <a href="" target="_blank"><i class="fab fa-facebook-f i-color mr-3"></i></a>
+    <a href="" target="_blank"><i class="fab fa-instagram i-color mr-3"></i></a>
+    <a href="" target="_blank"><i class="fab fa-linkedin i-color mr-3"></i></a>
+</div>
+
+                {% endblock %}

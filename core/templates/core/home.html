@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+{% load static %}
+ {% block css %}
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %}
+    {% block content %}
+                   <div class="img-fluid text-center "> <img class="img-fluid mt-5 rounded-circle" src="{% static 'images/1.jpeg' %}" alt="" style=" width:200px;  height:200px;">
+                </div>
+                <div>
+
+                    <h2 class="text-center"> Pawan kumar</h2>
+                </div>
+
+                <div class="mt-5 text-white mx-2 text-justify">
+                    <h1 class="font-weight-bold" style="height:50px; font-family:'Satisfy', cursive;">Hello,</h1>
+                </div>
+                <div class="px-4" style="line-height:2rem">
+
+                    <p style="text-indent:150px;"> I am <b class="text-warning">Pawan kumar </b> Experienced Engineering Specialist with a demonstrated history of working in the education management industry. Skilled in Team Motivation, Time Management, Program Management, Team Management, and Team Leadership. Strong information
+                            technology professional with a BTech 1st year focused in Travel and Exploration from Arya College of Engineering and IT.</b>
+                      </p>
+                    <p>Experienced Engineering Specialist with a demonstrated history of working in the education management industry. Skilled in Team Motivation, Time Management, Program Management, Team Management, and Team Leadership. Strong information
+                            technology professional with a BTech 1st year focused in Travel and Exploration from Arya College of Engineering and IT.</b>
+                      </p>
+
+
+
+                </div>
+<div class="text-center">                <a href="/contact/" class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+                <a href="/contact/" class="btn btn-outline-primary my-3 m-4">Contact Me</a>
+</div>
+                {% endblock %}
